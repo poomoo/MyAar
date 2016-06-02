@@ -189,9 +189,8 @@ public class TagFlowLayout extends FlowLayout implements TagAdapter.OnDataChange
             Integer preIndex = iterator.next();
             TagView pre = (TagView) getChildAt(preIndex);
             pre.setChecked(false);
-            mSelectedView.remove(pre);
         }
-
+        mSelectedView.clear();
         TagView defaultView = (TagView) getChildAt(0);
         defaultView.setChecked(true);
         mSelectedView.add(0);
